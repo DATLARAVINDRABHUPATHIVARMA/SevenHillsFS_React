@@ -75,7 +75,7 @@ const Services = () => {
                 <a href="" className="flex items-center mt-2 space-x-2 text-sky-500 font-bold hover:underline"><span>More</span><FaArrowRight className="text-xs"/></a>
               </div>
             </div>
-           ))}
+          ))}
         </div>
       </div>
     </div>
