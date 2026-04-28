@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FaAlignJustify, FaChevronDown, FaEnvelope, FaPhoneAlt } from 'react-icons/fa';
+import Logo from '../assets/Seven_Hills_Logo.png';
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
     <div className='bg-white border-b border-b-gray-200'>
       <div className='flex justify-between items-center max-w-7xl mx-auto px-4 lg:px-0'>
       <div>
-        <img src="src/assets/Seven_Hills_Logo.png" alt="logo" className='w-12 lg:w-25' />
+        <img src={Logo} alt="logo" className='w-12 lg:w-25' />
       </div>
       <div className=''>
         <div className='flex flex-col lg:flex-row justify-end py-1'>
