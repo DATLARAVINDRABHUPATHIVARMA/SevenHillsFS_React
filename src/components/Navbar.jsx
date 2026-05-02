@@ -19,11 +19,11 @@ const Navbar = () => {
         <div className='flex flex-col lg:flex-row justify-end py-1'>
           <div className='flex space-x-2 items-center'>
             <FaEnvelope className='text-sky-500'/>
-            <span>info@sevenhillsfs.com</span>
+            <span>hr@sevenhillsfs.com</span>
           </div>
           <div className='flex space-x-2 items-center ml-8'>
             <FaPhoneAlt className='text-sky-500'/>
-            <span>(123) 456-7890</span>
+            <span>+9140 35511829</span>
           </div>
         </div>
         <div className='hidden lg:flex items-center space-x-4 border-t border-t-gray-300 py-2'>
@@ -98,6 +98,7 @@ const Navbar = () => {
         <button onClick={() => setMobileMenu(!mobileMenu)} className='lg:hidden'> {mobileMenu ? <span className='font-bold text-xl'>X</span> :  <FaAlignJustify/>}</button>
       </div>
       </div>
+      
       {mobileMenu && (
         <div className={`${mobileMenu ? 'block' : 'hidden'} lg:hidden`}>
           <div className='py-3 flex flex-col space-y-2 max-h-[80vh] pl-4 overflow-y-auto'>
