@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../src/components/Navbar'
 import Carousel from './components/Carousel'
 import Choose from './components/Choose.jsx'
-// import Services from './components/Services'
+import Services from './components/Services'
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
       < Navbar />
       < Carousel />
       < Choose />
-      {/* < Services /> */}
+      < Services />
    </div>
   )
 }
