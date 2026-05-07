@@ -19,23 +19,11 @@ import twelfthImage from "../assets/SliderImages/12.jpg";
 const Carousel = () => {
   return (
     <div>
-      <Swiper
-        modules={[Autoplay, EffectFade]}
-        effect="fade"
-        fadeEffect={{ crossFade: true }}
-        loop={true}
-        autoplay={{ delay: 3000, disableOnInteraction: false }}
-        slidesPerView={1}
-        speed={1000}
-      >
+      <Swiper modules={[Autoplay, EffectFade]} effect="fade" fadeEffect={{ crossFade: true }} loop={true} autoplay={{ delay: 3000, disableOnInteraction: false }} slidesPerView={1} speed={8000}>
         <SwiperSlide>
           <div className="relative h-[70vh] lg:h-[90vh] overflow-hidden">
             <div className="relative h-full w-full">
-              <img
-                src={firstImage}
-                alt="image 1"
-                className="h-full w-full object-cover"
-              />
+              <img src={firstImage} alt="image 1" className="h-full w-full object-cover"/>
               <div className="absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10"></div>
             </div>
             <div className="absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0">
