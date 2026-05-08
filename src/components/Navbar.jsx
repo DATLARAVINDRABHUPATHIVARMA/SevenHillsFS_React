@@ -100,7 +100,7 @@ const Navbar = () => {
           </button>
         </div>
       </div>
-      {mobileMenu && (
+      { mobileMenu && (
         <div className={`${mobileMenu ? "block" : "hidden"} lg:hidden`}>
           <div className="py-3 flex flex-col space-y-2 max-h-[80vh] pl-4 overflow-y-auto">
             <a href="">Home</a>
@@ -109,7 +109,7 @@ const Navbar = () => {
                 <span>About Us</span>
                 <FaChevronDown className="text-xs ml-2" />
               </button>
-              {aboutDropdown && (
+              { aboutDropdown && (
                 <div className="flex flex-col space-y-2">
                   <a href="" className="pl-4">Company Profile</a>
                   <a href="" className="pl-4">History</a>
@@ -126,7 +126,7 @@ const Navbar = () => {
                 <span>Industries</span>
                 <FaChevronDown className="text-xs ml-2" />
               </button>
-              {industriesDropdown && (
+              { industriesDropdown && (
                 <div className="flex flex-col space-y-2">
                   <a href="" className="pl-4">Aviation</a>
                   <a href="" className="pl-4">Pharma & Healthcare</a>
@@ -145,7 +145,7 @@ const Navbar = () => {
                 <span>Services</span>
                 <FaChevronDown className="text-xs ml-2" />
               </button>
-              {servicesDropdown && (
+              { servicesDropdown && (
                 <div className="flex flex-col space-y-2">
                   <a href="" className="pl-4">House Keeping</a>
                   <a href="" className="pl-4">Technical</a>
@@ -165,7 +165,7 @@ const Navbar = () => {
                 <span>Locations</span>
                 <FaChevronDown className="text-xs ml-2" />
               </button>
-              {locationsDropdown && (
+              { locationsDropdown && (
                 <div className="flex flex-col space-y-2">
                   <a href="" className="pl-4">Shamshabad</a>
                   <a href="" className="pl-4">Turkapally</a>

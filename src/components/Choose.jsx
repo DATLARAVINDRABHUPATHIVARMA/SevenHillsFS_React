@@ -7,40 +7,23 @@ const Choose = () => {
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row">
           <div className="w-full lg:w-1/2">
-            <h2 className="text-3xl font-bold mb-4 px-4 lg:px-0">
-              Why Choose <span className="text-sky-500">Seven Hills?</span>
-            </h2>
-            <p className="max-w-lg px-4 lg:px-0">
-              We are a leading facility management company dedicated to providing exceptional services to our clients. With years of experience in the industry, we have built a reputation for excellence and reliability. Our team of skilled professionals is committed to delivering top-quality solutions tailored to meet your specific needs. We pride ourselves on our attention to detail, customer satisfaction, and our ability to handle a wide range of facility management tasks efficiently and effectively.
-            </p>
+            <h2 className="text-3xl font-bold mb-4 px-4 lg:px-0">Why Choose <span className="text-sky-500">Seven Hills?</span></h2>
+            <p className="max-w-lg px-4 lg:px-0">We are a leading facility management company dedicated to providing exceptional services to our clients. With years of experience in the industry, we have built a reputation for excellence and reliability. Our team of skilled professionals is committed to delivering top-quality solutions tailored to meet your specific needs. We pride ourselves on our attention to detail, customer satisfaction, and our ability to handle a wide range of facility management tasks efficiently and effectively.</p>
             <div className="px-4 lg:px-0 mt-8 mb-6">
               <h3 className="text-xl font-bold">Trained Professionals</h3>
-              <p className="text-xs">
-                Our team consists of highly trained and certified professionals
-                who are dedicated to providing top-notch service and support.
-              </p>
+              <p className="text-xs">Our team consists of highly trained and certified professionals who are dedicated to providing top-notch service and support.</p>
             </div>
             <div className="px-4 lg:px-0 mt-8 mb-6">
               <h3 className="text-xl font-bold">Comprehensive Services</h3>
-              <p className="text-xs">
-                We offer a wide range of services to meet all your facility
-                management needs, from maintenance to operations.
-              </p>
+              <p className="text-xs">We offer a wide range of services to meet all your facility management needs, from maintenance to operations.</p>
             </div>
             <div className="px-4 lg:px-0 mt-8 mb-6">
               <h3 className="text-xl font-bold">24/7 Support</h3>
-              <p className="text-xs">
-                Our dedicated support team is available around the clock to
-                address any issues or concerns you may have.
-              </p>
+              <p className="text-xs">Our dedicated support team is available around the clock to address any issues or concerns you may have.</p>
             </div>
           </div>
           <div className="mt-6 lg:mt-0 px-4 lg:px-0 w-full lg:w-1/2 flex justify-center items-center">
-            <img
-              src={choose}
-              className="rounded-full object-cover"
-              alt="Choose Us"
-            />
+            <img src={choose} className="rounded-full object-cover" alt="Choose Us"/>
           </div>
         </div>
       </div>

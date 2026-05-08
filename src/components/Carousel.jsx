@@ -19,7 +19,7 @@ import twelfthImage from "../assets/SliderImages/12.jpg";
 const Carousel = () => {
   return (
     <div>
-      <Swiper modules={[Autoplay, EffectFade]} effect="fade" fadeEffect={{ crossFade: true }} loop={true} autoplay={{ delay: 3000, disableOnInteraction: false }} slidesPerView={1} speed={8000}>
+      <Swiper modules={[Autoplay, EffectFade]} effect="fade" fadeEffect={{ crossFade: true }} loop={true} autoplay={{ delay: 4000, disableOnInteraction: false }} slidesPerView={1} speed={2000}>
         <SwiperSlide>
           <div className="relative h-[70vh] lg:h-[90vh] overflow-hidden">
             <div className="relative h-full w-full">
