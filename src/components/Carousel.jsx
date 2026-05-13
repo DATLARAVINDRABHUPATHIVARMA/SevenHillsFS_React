@@ -37,11 +37,7 @@ const Carousel = () => {
         <SwiperSlide>
           <div className="relative h-[70vh] lg:h-[90vh] overflow-hidden">
             <div className="relative h-full w-full">
-              <img
-                src={secondImage}
-                alt="image 2"
-                className="h-full w-full object-cover"
-              />
+              <img src={secondImage} alt="image 2" className="h-full w-full object-cover"/>
               <div className="absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10"></div>
             </div>
             <div className="absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0">
@@ -50,9 +46,7 @@ const Carousel = () => {
                   Professional Facility Management Services in{" "}
                   <span className="text-sky-500">Telangana</span>
                 </h1>
-                <p className="text-sm lg:text-xl">
-                  Enhancing the efficiency, safety, and sustainability of your facilities with our comprehensive facility management services. We are committed to delivering exceptional solutions that exceed your expectations and ensure the smooth operation of your facilities in Telangana.
-                </p>
+                <p className="text-sm lg:text-xl">Enhancing the efficiency, safety, and sustainability of your facilities with our comprehensive facility management services. We are committed to delivering exceptional solutions that exceed your expectations and ensure the smooth operation of your facilities in Telangana.</p>
               </div>
             </div>
           </div>

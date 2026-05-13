@@ -57,7 +57,6 @@ const ClientsFeed = () => {
                 </div>
               </div>
               <div className="text-gray-700 mb-4">{review.review}</div>
-              
             </div>
           </SwiperSlide>
         ))}
