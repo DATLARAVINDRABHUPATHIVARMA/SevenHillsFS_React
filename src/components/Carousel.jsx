@@ -42,10 +42,7 @@ const Carousel = () => {
             </div>
             <div className="absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0">
               <div className="max-w-lg px-12 lg:px-0">
-                <h1 className="text-2xl lg:text-5xl font-bold mb-4">
-                  Professional Facility Management Services in{" "}
-                  <span className="text-sky-500">Telangana</span>
-                </h1>
+                <h1 className="text-2xl lg:text-5xl font-bold mb-4">Professional Facility Management Services in{" "}<span className="text-sky-500">Telangana</span></h1>
                 <p className="text-sm lg:text-xl">Enhancing the efficiency, safety, and sustainability of your facilities with our comprehensive facility management services. We are committed to delivering exceptional solutions that exceed your expectations and ensure the smooth operation of your facilities in Telangana.</p>
               </div>
             </div>
@@ -73,13 +70,8 @@ const Carousel = () => {
             </div>
             <div className="absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0">
               <div className="max-w-lg px-12 lg:px-0">
-                <h1 className="text-2xl lg:text-5xl font-bold mb-4">
-                  Professional Facility Management Services in{" "}
-                  <span className="text-sky-500">Hyd</span>
-                </h1>
-                <p className="text-sm lg:text-xl">
-                  Leading provider of comprehensive facility management services, dedicated to delivering exceptional solutions that enhance the efficiency, safety, and sustainability of your facilities.
-                </p>
+                <h1 className="text-2xl lg:text-5xl font-bold mb-4">Professional Facility Management Services in{" "}<span className="text-sky-500">Hyd</span></h1>
+                <p className="text-sm lg:text-xl">Leading provider of comprehensive facility management services, dedicated to delivering exceptional solutions that enhance the efficiency, safety, and sustainability of your facilities.</p>
               </div>
             </div>
           </div>
