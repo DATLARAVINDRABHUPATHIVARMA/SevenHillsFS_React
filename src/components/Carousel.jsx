@@ -79,11 +79,7 @@ const Carousel = () => {
         <SwiperSlide>
           <div className="relative h-[70vh] lg:h-[90vh] overflow-hidden">
             <div className="relative h-full w-full">
-              <img
-                src={secondImage}
-                alt="image 2"
-                className="h-full w-full object-cover"
-              />
+              <img src={secondImage} alt="image 2" className="h-full w-full object-cover"/>
               <div className="absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10"></div>
             </div>
             <div className="absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0">
@@ -153,19 +149,12 @@ const Carousel = () => {
         <SwiperSlide>
           <div className="relative h-[70vh] lg:h-[90vh] overflow-hidden">
             <div className="relative h-full w-full">
-              <img
-                src={eighthImage}
-                alt="image 1"
-                className="h-full w-full object-cover"
-              />
+              <img src={eighthImage} alt="image 1" className="h-full w-full object-cover"/>
               <div className="absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10"></div>
             </div>
             <div className="absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0">
               <div className="max-w-lg px-12 lg:px-0">
-                <h1 className="text-2xl lg:text-5xl font-bold mb-4">
-                  Professional Facility Management Services in{" "}
-                  <span className="text-sky-500">Chandan Veli</span>
-                </h1>
+                <h1 className="text-2xl lg:text-5xl font-bold mb-4">Professional Facility Management Services in{" "}<span className="text-sky-500">Chandan Veli</span></h1>
                 <p className="text-sm lg:text-xl">We are a leading provider of comprehensive facility management services, dedicated to delivering exceptional solutions that enhance the efficiency, safety, and sustainability of your facilities.</p>
               </div>
             </div>
