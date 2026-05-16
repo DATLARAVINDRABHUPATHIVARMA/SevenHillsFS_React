@@ -57,7 +57,7 @@ const Carousel = () => {
             <div className="absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0">
               <div className="max-w-lg px-12 lg:px-0">
                 <h1 className="text-2xl lg:text-5xl font-bold mb-4">Professional Facility Management Services in{" "}<span className="text-sky-500">Andhra Pradesh</span></h1>
-                <p className="text-sm lg:text-xl">Facility management services encompass a wide range of activities aimed at ensuring the efficient and effective operation of facilities. These services include maintenance, cleaning, security, landscaping, waste management, and more. By outsourcing facility management services to a professional provider, organizations can focus on their core business activities while ensuring that their facilities are well-maintained and operate smoothly.</p>
+                <p className="text-sm lg:text-xl">Facility Management Services will ensure the optimal performance and longevity of your facilities.</p>
               </div>
             </div>
           </div>
