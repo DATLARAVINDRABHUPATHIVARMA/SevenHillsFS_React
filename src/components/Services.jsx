@@ -78,16 +78,11 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 px-8 lg:px-0">
           {services.map((service) => (
             <div key={service.id} className="bg-white rounded-lg shadow-md pb-4 hover:scale-110 transition-transform duration-600">
-              <img
-                src={service.image}
-                alt={service.title}
-                className="w-full h-72 object-cover rounded-md mb-4"
-              />
+              <img src={service.image} alt={service.title} className="w-full h-72 object-cover rounded-md mb-4"/>
               <div className="flex flex-col justify-center items-center px-8">
               <h3 className="text-xl font-bold mb-2">{service.title}</h3>
               <p className="text-sm">{service.description}</p>
-              <a href="" className="flex items-center mt-2 space-x-2 text-sky-500 font-bold hover:underline"> <span>More </span> <FaArrowRight className="text-xs"/>
-              </a>
+              <a href="" className="flex items-center mt-2 space-x-2 text-sky-500 font-bold hover:underline"><span>More </span><FaArrowRight className="text-xs"/></a>
               </div>
             </div>
           ))}
