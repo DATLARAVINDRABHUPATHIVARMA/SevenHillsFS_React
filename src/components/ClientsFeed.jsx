@@ -39,6 +39,12 @@ const reviews = [
     position: "Project Manager, Growth Inc",
     review: "Exceptional work and great communication throughout the project.",
   },
+  {
+    id: 6,
+    name: "David Wilson",
+    position: "Operations Director, Global Enterprises",
+    review: "Reliable and efficient service. They truly understand our needs and exceed expectations.",
+  }
 ];
 
 const ClientsFeed = () => {
