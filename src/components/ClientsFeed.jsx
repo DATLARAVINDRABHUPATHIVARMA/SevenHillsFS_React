@@ -44,7 +44,7 @@ const reviews = [
     name: "David Wilson",
     position: "Operations Director, Global Enterprises",
     review: "Reliable and efficient service. They truly understand our needs and exceed expectations.",
-  }
+  },
 ];
 
 const ClientsFeed = () => {
