@@ -45,6 +45,12 @@ const reviews = [
     position: "Operations Director, Global Enterprises",
     review: "Reliable and efficient service. They truly understand our needs and exceed expectations.",
   },
+  {
+    id: 7,
+    name: "Lisa Anderson",
+    position: "HR Director, PeopleFirst",
+    review: "Excellent customer service and attention to detail. They go above and beyond to ensure our satisfaction.",
+  },
 ];
 
 const ClientsFeed = () => {
