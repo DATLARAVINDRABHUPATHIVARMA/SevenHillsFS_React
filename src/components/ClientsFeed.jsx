@@ -51,6 +51,12 @@ const reviews = [
     position: "HR Director, PeopleFirst",
     review: "Excellent customer service and attention to detail. They go above and beyond to ensure our satisfaction.",
   },
+  {
+    id: 8,
+    name: "James Taylor",
+    position: "Marketing Manager, BrandBoost",
+    review: "Professional and responsive team. They consistently deliver high-quality results.",
+  },
 ];
 
 const ClientsFeed = () => {
