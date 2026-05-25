@@ -23,15 +23,13 @@ const reviews = [
     id: 3,
     name: "Emily Johnson",
     position: "Director, Creative Solutions",
-    review:
-      "A pleasure to work with. They exceeded our expectations in every way.",
+    review: "A pleasure to work with. They exceeded our expectations in every way.",
   },
   {
     id: 4,
     name: "Michael Brown",
     position: "Owner, Business Ventures",
-    review:
-      "Outstanding quality and service. I would definitely recommend them to others.",
+    review: "Outstanding quality and service. I would definitely recommend them to others.",
   },
   {
     id: 5,
@@ -50,12 +48,6 @@ const reviews = [
     name: "Lisa Anderson",
     position: "HR Director, PeopleFirst",
     review: "Excellent customer service and attention to detail. They go above and beyond to ensure our satisfaction.",
-  },
-  {
-    id: 8,
-    name: "James Taylor",
-    position: "Marketing Manager, BrandBoost",
-    review: "Professional and responsive team. They consistently deliver high-quality results.",
   },
 ];
 
