@@ -49,6 +49,12 @@ const reviews = [
     position: "HR Director, PeopleFirst",
     review: "Excellent customer service and attention to detail. They go above and beyond to ensure our satisfaction.",
   },
+  {
+    id: 8,
+    name: "Robert Taylor",
+    position: "Consultant, Strategy Partners",
+    review: "Impressive results and outstanding professionalism. A true partner in our success.",
+  },
 ];
 
 const ClientsFeed = () => {
