@@ -10,51 +10,57 @@ const reviews = [
   {
     id: 1,
     name: "John Doe",
-    position: "CEO, Tech Corp",
+    position: "CEO, Sattva Group",
     review: "Exceptional service and attention to detail. Highly recommended!",
   },
   {
     id: 2,
     name: "Jane Smith",
-    position: "Manager, Innovate Inc",
+    position: "Manager, NCC Limited",
     review: "Their team is professional and always delivers on time.",
   },
   {
     id: 3,
     name: "Emily Johnson",
-    position: "Director, Creative Solutions",
+    position: "Director, BlueDart Express Ltd.",
     review: "A pleasure to work with. They exceeded our expectations in every way.",
   },
   {
     id: 4,
     name: "Michael Brown",
-    position: "Owner, Business Ventures",
+    position: "Owner, V.R.K Jewellers",
     review: "Outstanding quality and service. I would definitely recommend them to others.",
   },
   {
     id: 5,
     name: "Sarah Davis",
-    position: "Project Manager, Growth Inc",
+    position: "Project Manager, Tata Projects Ltd.",
     review: "Exceptional work and great communication throughout the project.",
   },
   {
     id: 6,
     name: "David Wilson",
-    position: "Operations Director, Global Enterprises",
+    position: "Operations Director, JLL India Pvt. Ltd.",
     review: "Reliable and efficient service. They truly understand our needs and exceed expectations.",
   },
   {
     id: 7,
     name: "Lisa Anderson",
-    position: "HR Director, PeopleFirst",
+    position: "HR Director, Megha Engineering & Infrastructures Ltd.",
     review: "Excellent customer service and attention to detail. They go above and beyond to ensure our satisfaction.",
   },
   {
     id: 8,
     name: "Robert Taylor",
-    position: "Consultant, Strategy Partners",
+    position: "Consultant, GMR Group",
     review: "Impressive results and outstanding professionalism. A true partner in our success.",
   },
+  {
+    id: 9,
+    name: "Jessica Martinez",
+    position: "Facilities Manager, Coromandel International Ltd.",
+    review: "Their team is responsive, reliable, and always delivers high-quality work. We are extremely satisfied with their services.",
+  }
 ];
 
 const ClientsFeed = () => {

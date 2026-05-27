@@ -85,7 +85,7 @@ const Carousel = () => {
             <div className="absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0">
               <div className="max-w-lg px-12 lg:px-0">
                 <h1 className="text-2xl lg:text-5xl font-bold mb-4">Professional Facility Management Services in{" "}<span className="text-sky-500">TS</span></h1>
-                <p className="text-sm lg:text-xl">We are a leading provider of comprehensive facility management services,   delivering exceptional solutions that enhance the efficiency, safety, and sustainability of your facilities.</p>
+                <p className="text-sm lg:text-xl">We are a leading provider of comprehensive facility management services, delivering exceptional solutions that enhance the efficiency, safety, and sustainability of your facilities.</p>
               </div>
             </div>
           </div>
