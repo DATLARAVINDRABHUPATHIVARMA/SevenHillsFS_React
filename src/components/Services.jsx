@@ -14,56 +14,49 @@ const services = [
     title: "House Keeping",
     image: service1,
     link: "",
-    description:
-      "Housekeeping services include cleaning, laundry, and other domestic tasks to maintain a clean and organized living space. These services can be provided on a regular basis or as needed, and may include tasks such as dusting, vacuuming, mopping, and organizing.",
+    description: "Housekeeping services include cleaning, laundry, and other domestic tasks to maintain a clean and organized living space. These services can be provided on a regular basis or as needed, and may include tasks such as dusting, vacuuming, mopping, and organizing.",
   },
   {
     id: 2,
     title: "Technical",
     image: service2,
     link: "",
-    description:
-      "Technical services include maintenance, repairs, and installations for various systems and equipment. Our team of skilled professionals ensures that your property's technical infrastructure is functioning optimally.",
+    description: "Technical services include maintenance, repairs, and installations for various systems and equipment. Our team of skilled professionals ensures that your property's technical infrastructure is functioning optimally.",
   },
   {
     id: 3,
     title: "Pest Control",
     image: service3,
     link: "",
-    description:
-      "Pest control services include identification, treatment, and prevention of various pests that may infest your property. Our team uses safe and effective methods to eliminate existing infestations and prevent future ones.",
+    description: "Pest control services include identification, treatment, and prevention of various pests that may infest your property. Our team uses safe and effective methods to eliminate existing infestations and prevent future ones.",
   },
   {
     id: 4,
     title: "General Staffing",
     image: service4,
     link: "",
-    description:
-      "General staffing services include providing trained personnel for various roles such as receptionists, security guards, maintenance staff, and more. We ensure that our staff is well-trained and professional to meet your specific needs.",
+    description: "General staffing services include providing trained personnel for various roles such as receptionists, security guards, maintenance staff, and more. We ensure that our staff is well-trained and professional to meet your specific needs.",
   },
   {
     id: 5,
     title: "Security",
     image: service5,
     link: "",
-    description:
-      "Security services include providing trained security personnel to protect your property and ensure the safety of your residents and assets. Our security staff is equipped to handle various situations and maintain a secure environment.",
+    description: "Security services include providing trained security personnel to protect your property and ensure the safety of your residents and assets. Our security staff is equipped to handle various situations and maintain a secure environment.",
   },
   {
     id: 6,
     title: "Man Power Supply",
     image: service6,
     link: "",
-    description:
-      "Man power supply services include providing skilled labor for various construction and maintenance projects. Our team of experienced workers ensures that your projects are completed efficiently and to the highest standards.",
+    description: "Man power supply services include providing skilled labor for various construction and maintenance projects. Our team of experienced workers ensures that your projects are completed efficiently and to the highest standards.",
   },
   {
     id: 7,
     title: "Office Support",
     image: service7,
     link: "",
-    description:
-      "Office support services include administrative assistance, data entry, and other tasks to help your office run smoothly. Our team of professionals is dedicated to providing reliable and efficient support to meet your office needs.",
+    description: "Office support services include administrative assistance, data entry, and other tasks to help your office run smoothly. Our team of professionals is dedicated to providing reliable and efficient support to meet your office needs.",
   },
 ];
 
