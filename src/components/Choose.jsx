@@ -23,7 +23,7 @@ const Choose = () => {
             </div>
           </div>
           <div className="mt-6 lg:mt-0 px-4 lg:px-0 w-full lg:w-1/2 flex justify-center items-center">
-            <img src={choose} className="rounded-full object-cover" alt="Choose Us"/>
+            <img src={ choose } className="rounded-full object-cover" alt="Choose Us"/>
           </div>
         </div>
       </div>
