@@ -52,6 +52,7 @@ const Navbar = () => {
                 <a href="" className="block px-4 py-2 hover:bg-gray-100">Manufacturing</a>
                 <a href="" className="block px-4 py-2 hover:bg-gray-100">Retailing</a>
                 <a href="" className="block px-4 py-2 hover:bg-gray-100">Hospitality</a>
+                <a href="" className="block px-4 py-2 hover:bg-gray-100">Finance</a>
               </div>
             </div>
             <div className="group">
