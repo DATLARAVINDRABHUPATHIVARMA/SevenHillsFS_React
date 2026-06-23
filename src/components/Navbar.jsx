@@ -108,11 +108,9 @@ const Navbar = () => {
               <Link to="/contact" className="nav-link">Contact Us</Link>
             </div>
           </div>
-          <div className="ml-4 flex items-center">
-            <button className="xl:block hidden get-quote-btn">Get a Quote</button>
-            <button onClick={() => setMobileMenu(!mobileMenu)} className="xl:hidden text-2xl text-gray-800">
-              { mobileMenu ? "✕" : <FaAlignJustify />}
-            </button>
+          <div className="ml-4 flex items-center gap-3">
+            {window.innerWidth >= 1280 && (<button className="get-quote-btn">Get a Quote</button>)}
+            <button onClick={() => setMobileMenu(!mobileMenu)} className="xl:hidden text-2xl text-gray-800">{mobileMenu ? "✕" : <FaAlignJustify />}</button>
           </div>
         </div>
       </div>
@@ -225,7 +223,7 @@ const Navbar = () => {
         .mobile-dropdown { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; margin-left: 16px; }
         .mobile-dropdown a { color: #4b5563; font-size: 15px; font-weight: 500; text-decoration: none; display: block; }
         .mobile-dropdown a:hover { color: #ec4899; }
-        .logo-link { display: inline-block; transition: transform 3s ease; }
+        .logo-link { display: inline-block; transition: transform 2s ease; }
         .logo-link:hover { transform: scale(1.25); } 
         .logo-image { display: block; }
       `}</style>
