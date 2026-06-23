@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaAlignJustify, FaChevronDown, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Logo from "../assets/Seven_Hills_Logo.png";
 
@@ -23,7 +24,13 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 xl:px-3">
         <div className="flex items-center justify-between h-[72px] xl:h-[78px]">
           <div className="flex-shrink-0">
-            <img src={Logo} alt="logo" className="w-14 sm:w-16 xl:w-20 object-contain"/>
+            <Link to="/" className="logo-link">
+              <img 
+                src={Logo} 
+                alt="logo" 
+                className="w-14 sm:w-16 xl:w-20 object-contain logo-image"
+              />
+            </Link>
           </div>
           <div className="hidden xl:flex flex-1 ml-6 flex-col justify-center">
             <div className="flex justify-end items-center text-[15px] pb-1">
@@ -37,17 +44,17 @@ const Navbar = () => {
               </div>
             </div>
             <div className="flex items-center justify-between border-t border-gray-300 pt-1.5">
-              <a href="/" className="nav-link">Home</a>
+              <Link to="/" className="nav-link">Home</Link>
               <div className="relative" onMouseEnter={() => handleMouseEnter("about")}>
                 <button className="menu-btn">
                   About Us <FaChevronDown className={`ml-1 text-[11px] transition duration-300 ${ activeDropdown === "about" ? "rotate-180" : "" }`}/>
                 </button>
                 {activeDropdown === "about" && ( 
                   <div className="dropdown-menu" onMouseEnter={handleDropdownMouseEnter} onMouseLeave={handleDropdownMouseLeave}>
-                    <a href="/company-profile" className="dropdown-item">Company Profile</a>
-                    <a href="/history" className="dropdown-item">History</a>
-                    <a href="/leadership" className="dropdown-item">Leadership</a>
-                    <a href="/accolades" className="dropdown-item">Accolades</a>
+                    <Link to="/company-profile" className="dropdown-item">Company Profile</Link>
+                    <Link to="/history" className="dropdown-item">History</Link>
+                    <Link to="/leadership" className="dropdown-item">Leadership</Link>
+                    <Link to="/accolades" className="dropdown-item">Accolades</Link>
                   </div>
                 )}
               </div>
@@ -55,12 +62,12 @@ const Navbar = () => {
                 <button className="menu-btn">Industries<FaChevronDown className={`ml-1 text-[11px] transition duration-300 ${ activeDropdown === "industries" ? "rotate-180" : "" }`}/></button>
                 {activeDropdown === "industries" && (
                   <div className="dropdown-menu" onMouseEnter={handleDropdownMouseEnter} onMouseLeave={handleDropdownMouseLeave}>
-                    <a href="/industries/aviation" className="dropdown-item">Aviation</a>
-                    <a href="/industries/pharma-healthcare" className="dropdown-item">Pharma & Healthcare</a>
-                    <a href="/industries/information-technology" className="dropdown-item">Information Technology</a>
-                    <a href="/industries/manufacturing" className="dropdown-item">Manufacturing</a>
-                    <a href="/industries/retailing" className="dropdown-item">Retailing</a>
-                    <a href="/industries/hospitality" className="dropdown-item">Hospitality</a>
+                    <Link to="/industries/aviation" className="dropdown-item">Aviation</Link>
+                    <Link to="/industries/pharma-healthcare" className="dropdown-item">Pharma & Healthcare</Link>
+                    <Link to="/industries/information-technology" className="dropdown-item">Information Technology</Link>
+                    <Link to="/industries/manufacturing" className="dropdown-item">Manufacturing</Link>
+                    <Link to="/industries/retailing" className="dropdown-item">Retailing</Link>
+                    <Link to="/industries/hospitality" className="dropdown-item">Hospitality</Link>
                   </div>
                 )}
               </div>
@@ -68,13 +75,13 @@ const Navbar = () => {
                 <button className="menu-btn">Services<FaChevronDown className={`ml-1 text-[11px] transition duration-300 ${ activeDropdown === "services" ? "rotate-180" : "" }`}/></button>
                 {activeDropdown === "services" && (
                   <div className="dropdown-menu" onMouseEnter={handleDropdownMouseEnter} onMouseLeave={handleDropdownMouseLeave}>
-                    <a href="/services/house-keeping" className="dropdown-item">House Keeping</a>
-                    <a href="/services/technical" className="dropdown-item">Technical</a>
-                    <a href="/services/pest-control" className="dropdown-item">Pest Control</a>
-                    <a href="/services/general-staffing" className="dropdown-item">General Staffing</a>
-                    <a href="/services/security" className="dropdown-item">Security</a>
-                    <a href="/services/man-power-supply" className="dropdown-item">Man Power Supply</a>
-                    <a href="/services/office-support" className="dropdown-item">Office Support</a>
+                    <Link to="/services/house-keeping" className="dropdown-item">House Keeping</Link>
+                    <Link to="/services/technical" className="dropdown-item">Technical</Link>
+                    <Link to="/services/pest-control" className="dropdown-item">Pest Control</Link>
+                    <Link to="/services/general-staffing" className="dropdown-item">General Staffing</Link>
+                    <Link to="/services/security" className="dropdown-item">Security</Link>
+                    <Link to="/services/man-power-supply" className="dropdown-item">Man Power Supply</Link>
+                    <Link to="/services/office-support" className="dropdown-item">Office Support</Link>
                   </div>
                 )}
               </div>
@@ -82,29 +89,29 @@ const Navbar = () => {
                 <button className="menu-btn">Locations<FaChevronDown className={`ml-1 text-[11px] transition duration-300 ${ activeDropdown === "locations" ? "rotate-180" : "" }`}/></button>
                 {activeDropdown === "locations" && (
                   <div className="dropdown-menu" onMouseEnter={handleDropdownMouseEnter} onMouseLeave={handleDropdownMouseLeave}>
-                    <a href="/locations/shamshabad" className="dropdown-item">Shamshabad</a>
-                    <a href="/locations/turkapally" className="dropdown-item">Turkapally</a>
-                    <a href="/locations/chandan-veli" className="dropdown-item">Chandan Veli</a>
-                    <a href="/locations/secunderabad" className="dropdown-item">Secunderabad</a>
-                    <a href="/locations/hyderabad" className="dropdown-item">Hyderabad</a>
-                    <a href="/locations/telangana" className="dropdown-item">Telangana</a>
-                    <a href="/locations/andhra-pradesh" className="dropdown-item">Andhra Pradesh</a>
-                    <a href="/locations/karnataka" className="dropdown-item">Karnataka</a>
-                    <a href="/locations/tamil-nadu" className="dropdown-item">Tamil Nadu</a>
-                    <a href="/locations/pan-india" className="dropdown-item">PAN India</a>
+                    <Link to="/locations/shamshabad" className="dropdown-item">Shamshabad</Link>
+                    <Link to="/locations/turkapally" className="dropdown-item">Turkapally</Link>
+                    <Link to="/locations/chandan-veli" className="dropdown-item">Chandan Veli</Link>
+                    <Link to="/locations/secunderabad" className="dropdown-item">Secunderabad</Link>
+                    <Link to="/locations/hyderabad" className="dropdown-item">Hyderabad</Link>
+                    <Link to="/locations/telangana" className="dropdown-item">Telangana</Link>
+                    <Link to="/locations/andhra-pradesh" className="dropdown-item">Andhra Pradesh</Link>
+                    <Link to="/locations/karnataka" className="dropdown-item">Karnataka</Link>
+                    <Link to="/locations/tamil-nadu" className="dropdown-item">Tamil Nadu</Link>
+                    <Link to="/locations/pan-india" className="dropdown-item">PAN India</Link>
                   </div>
                 )}
               </div>
-              <a href="/clients" className="nav-link">Clients</a>
-              <a href="/gallery" className="nav-link">Gallery</a>
-              <a href="/careers" className="nav-link">Careers</a>
-              <a href="/contact" className="nav-link">Contact Us</a>
+              <Link to="/clients" className="nav-link">Clients</Link>
+              <Link to="/gallery" className="nav-link">Gallery</Link>
+              <Link to="/careers" className="nav-link">Careers</Link>
+              <Link to="/contact" className="nav-link">Contact Us</Link>
             </div>
           </div>
           <div className="ml-4 flex items-center">
             <button className="xl:block hidden get-quote-btn">Get a Quote</button>
             <button onClick={() => setMobileMenu(!mobileMenu)} className="xl:hidden text-2xl text-gray-800">
-              {mobileMenu ? "✕" : <FaAlignJustify />}
+              { mobileMenu ? "✕" : <FaAlignJustify />}
             </button>
           </div>
         </div>
@@ -122,7 +129,7 @@ const Navbar = () => {
                 <span className="text-gray-800 text-sm font-semibold group-hover:text-pink-500">+9140 35511829</span>
               </div>
             </div>
-            <a href="/" className="mobile-link">Home</a>
+            <Link to="/" className="mobile-link">Home</Link>
             <div>
               <button onClick={() => setAboutDropdown(!aboutDropdown)} className="mobile-dropdown-btn">
                 <span>About Us</span>
@@ -130,10 +137,10 @@ const Navbar = () => {
               </button>
               {aboutDropdown && (
                 <div className="mobile-dropdown">
-                  <a href="/company-profile">Company Profile</a>
-                  <a href="/history">History</a>
-                  <a href="/leadership">Leadership</a>
-                  <a href="/accolades">Accolades</a>
+                  <Link to="/company-profile">Company Profile</Link>
+                  <Link to="/history">History</Link>
+                  <Link to="/leadership">Leadership</Link>
+                  <Link to="/accolades">Accolades</Link>
                 </div>
               )}
             </div>
@@ -144,12 +151,12 @@ const Navbar = () => {
               </button>
               {industriesDropdown && (
                 <div className="mobile-dropdown">
-                  <a href="/industries/aviation">Aviation</a>
-                  <a href="/industries/pharma-healthcare">Pharma & Healthcare</a>
-                  <a href="/industries/information-technology">Information Technology</a>
-                  <a href="/industries/manufacturing">Manufacturing</a>
-                  <a href="/industries/retailing">Retailing</a>
-                  <a href="/industries/hospitality">Hospitality</a>
+                  <Link to="/industries/aviation">Aviation</Link>
+                  <Link to="/industries/pharma-healthcare">Pharma & Healthcare</Link>
+                  <Link to="/industries/information-technology">Information Technology</Link>
+                  <Link to="/industries/manufacturing">Manufacturing</Link>
+                  <Link to="/industries/retailing">Retailing</Link>
+                  <Link to="/industries/hospitality">Hospitality</Link>
                 </div>
               )}
             </div>
@@ -160,13 +167,13 @@ const Navbar = () => {
               </button>
               {servicesDropdown && (
                 <div className="mobile-dropdown">
-                  <a href="/services/house-keeping">House Keeping</a>
-                  <a href="/services/technical">Technical</a>
-                  <a href="/services/pest-control">Pest Control</a>
-                  <a href="/services/general-staffing">General Staffing</a>
-                  <a href="/services/security">Security</a>
-                  <a href="/services/man-power-supply">Man Power Supply</a>
-                  <a href="/services/office-support">Office Support</a>
+                  <Link to="/services/house-keeping">House Keeping</Link>
+                  <Link to="/services/technical">Technical</Link>
+                  <Link to="/services/pest-control">Pest Control</Link>
+                  <Link to="/services/general-staffing">General Staffing</Link>
+                  <Link to="/services/security">Security</Link>
+                  <Link to="/services/man-power-supply">Man Power Supply</Link>
+                  <Link to="/services/office-support">Office Support</Link>
                 </div>
               )}
             </div>
@@ -177,23 +184,23 @@ const Navbar = () => {
               </button>
               {locationsDropdown && (
                 <div className="mobile-dropdown">
-                  <a href="/locations/shamshabad">Shamshabad</a>
-                  <a href="/locations/turkapally">Turkapally</a>
-                  <a href="/locations/chandan-veli">Chandan Veli</a>
-                  <a href="/locations/secunderabad">Secunderabad</a>
-                  <a href="/locations/hyderabad">Hyderabad</a>
-                  <a href="/locations/telangana">Telangana</a>
-                  <a href="/locations/andhra-pradesh">Andhra Pradesh</a>
-                  <a href="/locations/karnataka">Karnataka</a>
-                  <a href="/locations/tamil-nadu">Tamil Nadu</a>
-                  <a href="/locations/pan-india">PAN India</a>
+                  <Link to="/locations/shamshabad">Shamshabad</Link>
+                  <Link to="/locations/turkapally">Turkapally</Link>
+                  <Link to="/locations/chandan-veli">Chandan Veli</Link>
+                  <Link to="/locations/secunderabad">Secunderabad</Link>
+                  <Link to="/locations/hyderabad">Hyderabad</Link>
+                  <Link to="/locations/telangana">Telangana</Link>
+                  <Link to="/locations/andhra-pradesh">Andhra Pradesh</Link>
+                  <Link to="/locations/karnataka">Karnataka</Link>
+                  <Link to="/locations/tamil-nadu">Tamil Nadu</Link>
+                  <Link to="/locations/pan-india">PAN India</Link>
                 </div>
               )}
             </div>
-            <a href="/clients" className="mobile-link">Clients</a>
-            <a href="/gallery" className="mobile-link">Gallery</a>
-            <a href="/careers" className="mobile-link">Careers</a>
-            <a href="/contact" className="mobile-link">Contact Us</a>
+            <Link to="/clients" className="mobile-link">Clients</Link>
+            <Link to="/gallery" className="mobile-link">Gallery</Link>
+            <Link to="/careers" className="mobile-link">Careers</Link>
+            <Link to="/contact" className="mobile-link">Contact Us</Link>
             <button className="mt-3 get-quote-btn-mobile">Get a Quote</button>
           </div>
         </div>
@@ -218,6 +225,9 @@ const Navbar = () => {
         .mobile-dropdown { display: flex; flex-direction: column; gap: 12px; margin-top: 14px; margin-left: 16px; }
         .mobile-dropdown a { color: #4b5563; font-size: 15px; font-weight: 500; text-decoration: none; display: block; }
         .mobile-dropdown a:hover { color: #ec4899; }
+        .logo-link { display: inline-block; transition: transform 3s ease; }
+        .logo-link:hover { transform: scale(1.25); } 
+        .logo-image { display: block; }
       `}</style>
     </div>
   );

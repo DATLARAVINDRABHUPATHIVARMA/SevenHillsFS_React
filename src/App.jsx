@@ -1,19 +1,26 @@
-import React from 'react'
-import Navbar from '../src/components/Navbar'
-import Carousel from './components/Carousel'
-import Choose from './components/Choose.jsx'
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Carousel from './components/Carousel';
+import Choose from './components/Choose';
 // import Services from './components/Services'
 
 function App() {
-
   return (
-   <div>
-      < Navbar />
-      < Carousel />
-      < Choose />
-      {/* < Services /> */}
-   </div>
-  )
+    <>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={
+          <>
+            <Carousel />
+            <Choose />
+            {/* <Services /> */}
+          </>
+        } />
+        {/* Add more routes here later when you create pages */}
+      </Routes>
+    </>
+  );
 }
 
-export default App
+export default App;
