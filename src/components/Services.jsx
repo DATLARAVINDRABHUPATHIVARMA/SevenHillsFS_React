@@ -72,7 +72,7 @@ const Services = () => {
               <div className="flex flex-col justify-center items-center px-8">
                 <h3 className="text-xl font-bold mb-2">{service.title}</h3>
                 <p className="text-sm">{service.description}</p>
-                <a href="" className="flex items-center mt-2 space-x-2 text-sky-500 font-bold hover:underline"><span>More</span><FaArrowRight className="text-xs"/></a>
+                <a href="" className="flex items-center mt-2 space-x-2 text-sky-500 font-bold hover:underline"><span>More</span><FaArrowRight className="text-xs"/></a> 
               </div>
             </div>
           ))}
