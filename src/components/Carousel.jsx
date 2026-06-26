@@ -58,14 +58,14 @@ const slides = [
 ];
 
 const VibgyorHeading = () => (
-  <h2 className="font-black uppercase leading-none whitespace-nowrap text-lg sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-6xl">
+  <h2 className="font-black uppercase leading-none whitespace-nowrap text-[3.8vw] sm:text-2xl md:text-3xl xl:text-3xl 2xl:text-5xl">
     <span className="text-red-600">S</span>
     <span className="text-red-400">E</span>
     <span className="text-orange-500">V</span>
     <span className="text-amber-500">E</span>
     <span className="text-yellow-500">N</span>
 
-    <span className="mx-1 xl:mx-2"></span>
+    <span className="mx-0.5 sm:mx-1 xl:mx-1.5"></span>
 
     <span className="text-lime-500">H</span>
     <span className="text-green-600">I</span>
@@ -73,7 +73,7 @@ const VibgyorHeading = () => (
     <span className="text-teal-500">L</span>
     <span className="text-cyan-500">S</span>
 
-    <span className="mx-1 xl:mx-2"></span>
+    <span className="mx-0.5 sm:mx-1 xl:mx-1.5"></span>
 
     <span className="text-sky-500">F</span>
     <span className="text-blue-600">A</span>
@@ -84,7 +84,7 @@ const VibgyorHeading = () => (
     <span className="text-pink-500">T</span>
     <span className="text-rose-500">Y</span>
 
-    <span className="mx-1 xl:mx-2"></span>
+    <span className="mx-0.5 sm:mx-1 xl:mx-1.5"></span>
 
     <span className="text-red-500">S</span>
     <span className="text-orange-500">E</span>
@@ -114,48 +114,47 @@ const Carousel = () => {
         {slides.map((slide, index) => (
           <SwiperSlide key={index}>
             <>
-              {/* ================= MOBILE & TABLET ================= */}
-              <div className="xl:hidden bg-white">
-                {/* Brand */}
-                <div className="pt-8 px-4 text-center">
+              {/* ================= MOBILE & TABLET (< 1280px) ================= */}
+              <div className="xl:hidden flex flex-col bg-white">
+                
+                {/* Brand Header */}
+                <div className="py-6 px-4 text-center flex-shrink-0">
                   <VibgyorHeading />
                 </div>
 
-                {/* Opening Curve Image */}
-                <div className="mt-8 flex justify-start">
-                  <div
-                    className="w-[92%] h-[260px] sm:h-[350px] md:h-[420px] overflow-hidden shadow-xl"
-                    style={{
-                      borderTopRightRadius: "220px",
-                      borderBottomRightRadius: "220px",
-                    }}
-                  >
-                    <img
-                      src={slide.image}
-                      alt={slide.location}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
+                {/* Unified Image Wrapper Layer */}
+                <div 
+                  className="w-[92%] mr-auto overflow-hidden shadow-xl flex-shrink-0 portrait:aspect-[4/5] landscape:aspect-[5/4]"
+                  style={{
+                    borderTopRightRadius: "9999px",
+                    borderBottomRightRadius: "9999px",
+                  }}
+                >
+                  <img
+                    src={slide.image}
+                    alt={slide.location}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
 
-                {/* Content */}
-                <div className="px-6 py-10">
-                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                {/* Content Block */}
+                <div className="px-6 py-8 flex-grow flex flex-col justify-center">
+                  <h1 className="text-2xl sm:text-4xl font-bold text-gray-900 leading-tight">
                     {slide.title}
                     <br />
                     <span className="text-pink-500">{slide.location}</span>
                   </h1>
 
-                  <p className="mt-6 text-gray-600 text-base sm:text-lg leading-8">
+                  <p className="mt-4 text-gray-600 text-sm sm:text-base leading-relaxed max-w-2xl">
                     {slide.description}
                   </p>
                 </div>
               </div>
 
-              {/* ================= DESKTOP (1280px - 1360px Safe) ================= */}
+              {/* ================= DESKTOP (>= 1280px) ================= */}
               <div className="hidden xl:block relative h-[780px] bg-white overflow-hidden">
                 
-                {/* 1. BACKGROUND VISUAL LAYER */}
+                {/* BACKGROUND DECORATION LAYER */}
                 {/* Left Pink Circle Segment */}
                 <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 overflow-hidden pointer-events-none">
                   <div
@@ -168,13 +167,13 @@ const Carousel = () => {
                   />
                 </div>
 
-                {/* Right Edge-to-Edge Image */}
-                <div className="absolute right-0 top-0 h-full w-[32%] z-10">
+                {/* Right Edge-to-Edge Image (40% Screen Width) */}
+                <div className="absolute right-0 top-0 h-full w-[40%] z-10">
                   <div
                     className="h-full w-full overflow-hidden"
                     style={{
-                      borderTopLeftRadius: "450px",
-                      borderBottomLeftRadius: "450px",
+                      borderTopLeftRadius: "9999px",
+                      borderBottomLeftRadius: "9999px",
                     }}
                   >
                     <img
@@ -185,19 +184,17 @@ const Carousel = () => {
                   </div>
                 </div>
 
-
-                {/* 2. FOREGROUND CONTENT LAYER */}
-                {/* Max-W container controls horizontal spacing perfectly */}
-                <div className="max-w-7xl mx-auto h-full px-12 relative z-20 flex flex-col justify-between py-20">
+                {/* FOREGROUND CONTENT LAYER */}
+                <div className="max-w-7xl mx-auto h-full px-8 xl:px-12 relative z-20 flex flex-col justify-between py-20">
                   
-                  {/* Top: Brand Heading aligned with max-w grid, safe from left pink circle */}
-                  <div className="w-[65%] pl-4">
+                  {/* Top Brand Heading */}
+                  <div className="w-[55%]">
                     <VibgyorHeading />
                   </div>
 
-                  {/* Middle/Bottom: Headings and description */}
-                  <div className="w-[62%] mb-auto pt-24 pl-4">
-                    <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight">
+                  {/* Text Content Area */}
+                  <div className="w-[55%] mb-auto pt-24">
+                    <h1 className="text-4xl xl:text-4xl 2xl:text-6xl font-bold text-gray-900 leading-tight">
                       {slide.title}
                       <br />
                       <span className="text-pink-500">
