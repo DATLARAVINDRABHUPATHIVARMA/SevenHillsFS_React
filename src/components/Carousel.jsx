@@ -1,137 +1,223 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-fade';
-import { EffectFade, Autoplay } from 'swiper/modules';
-import firstImage from '../assets/SliderImages/1.jpg';
-import secondImage from '../assets/SliderImages/2.jpg';
-import thirdImage from '../assets/SliderImages/3.jpg'; 
-import fourthImage from '../assets/SliderImages/4.jpg';
-import fifthImage from '../assets/SliderImages/5.jpg'; 
-import sixthImage from '../assets/SliderImages/6.jpg';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, EffectFade } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/effect-fade";
+
+import firstImage from "../assets/SliderImages/1.jpg";
+import secondImage from "../assets/SliderImages/2.jpg";
+import thirdImage from "../assets/SliderImages/3.jpg";
+import fourthImage from "../assets/SliderImages/4.jpg";
+import fifthImage from "../assets/SliderImages/5.jpg";
+import sixthImage from "../assets/SliderImages/6.jpg";
+
+const slides = [
+  {
+    image: firstImage,
+    title: "Corporate Headquarters Excellence in",
+    location: "Hyderabad",
+    description:
+      "Seven Hills Facility Services delivers integrated facility management solutions with operational excellence, innovation and client satisfaction.",
+  },
+  {
+    image: secondImage,
+    title: "Integrated Facility Solutions Across",
+    location: "Telangana",
+    description:
+      "Providing comprehensive housekeeping, security, staffing and technical maintenance solutions across Telangana.",
+  },
+  {
+    image: thirdImage,
+    title: "Strategic Facility Management for",
+    location: "Andhra Pradesh",
+    description:
+      "Offering professional facility services that enhance workplace efficiency and operational continuity.",
+  },
+  {
+    image: fourthImage,
+    title: "Premium Facility Services in",
+    location: "Shamshabad",
+    description:
+      "Delivering reliable and innovative facility management services tailored to client requirements.",
+  },
+  {
+    image: fifthImage,
+    title: "Superior Facility Solutions for",
+    location: "Turkapally",
+    description:
+      "Providing customized staffing, maintenance and support services for businesses of all sizes.",
+  },
+  {
+    image: sixthImage,
+    title: "Nationwide Facility Management",
+    location: "PAN India",
+    description:
+      "A trusted partner delivering housekeeping, security, manpower and technical services nationwide.",
+  },
+];
+
+const VibgyorHeading = () => (
+  <h2 className="font-black uppercase leading-none whitespace-nowrap text-lg sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-6xl">
+    <span className="text-red-600">S</span>
+    <span className="text-red-400">E</span>
+    <span className="text-orange-500">V</span>
+    <span className="text-amber-500">E</span>
+    <span className="text-yellow-500">N</span>
+
+    <span className="mx-1 xl:mx-2"></span>
+
+    <span className="text-lime-500">H</span>
+    <span className="text-green-600">I</span>
+    <span className="text-emerald-500">L</span>
+    <span className="text-teal-500">L</span>
+    <span className="text-cyan-500">S</span>
+
+    <span className="mx-1 xl:mx-2"></span>
+
+    <span className="text-sky-500">F</span>
+    <span className="text-blue-600">A</span>
+    <span className="text-indigo-500">C</span>
+    <span className="text-violet-500">I</span>
+    <span className="text-purple-500">L</span>
+    <span className="text-fuchsia-500">I</span>
+    <span className="text-pink-500">T</span>
+    <span className="text-rose-500">Y</span>
+
+    <span className="mx-1 xl:mx-2"></span>
+
+    <span className="text-red-500">S</span>
+    <span className="text-orange-500">E</span>
+    <span className="text-yellow-500">R</span>
+    <span className="text-lime-500">V</span>
+    <span className="text-cyan-500">I</span>
+    <span className="text-blue-500">C</span>
+    <span className="text-indigo-500">E</span>
+    <span className="text-violet-500">S</span>
+  </h2>
+);
 
 const Carousel = () => {
   return (
-    <div>
-      <Swiper 
-        modules={[Autoplay, EffectFade]} 
-        effect='fade' 
-        fadeEffect={{crossFade: true}} 
-        loop={true} 
-        autoplay={{delay: 3000, disableOnInteraction: false}} 
-        slidesPerView={1} 
+    <section className="bg-white overflow-hidden">
+      <Swiper
+        modules={[Autoplay, EffectFade]}
+        effect="fade"
+        fadeEffect={{ crossFade: true }}
+        loop
         speed={1000}
+        autoplay={{
+          delay: 4000,
+          disableOnInteraction: false,
+        }}
       >
-        <SwiperSlide>
-          <div className='relative w-full aspect-[4/5] sm:aspect-[16/9] overflow-hidden'>
-            <div className='relative h-full w-full'>
-              <img src={firstImage} alt="Hyderabad" className='h-full w-full object-cover'/>
-              <div className='absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10'></div>
-            </div>
-            <div className='absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0'>
-              <div className='max-w-lg px-6 sm:px-12 lg:px-0'>
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight'>
-                  Corporate Headquarters Excellence in <span className='text-pink-500'>Hyderabad</span>
-                </h1>
-                <p className='text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed'>
-                  Seven Hills Facility Services' corporate headquarters orchestrates comprehensive facility management solutions, delivering operational excellence and strategic innovation across the region.
-                </p>
+        {slides.map((slide, index) => (
+          <SwiperSlide key={index}>
+            <>
+              {/* ================= MOBILE & TABLET ================= */}
+              <div className="xl:hidden bg-white">
+                {/* Brand */}
+                <div className="pt-8 px-4 text-center">
+                  <VibgyorHeading />
+                </div>
+
+                {/* Opening Curve Image */}
+                <div className="mt-8 flex justify-start">
+                  <div
+                    className="w-[92%] h-[260px] sm:h-[350px] md:h-[420px] overflow-hidden shadow-xl"
+                    style={{
+                      borderTopRightRadius: "220px",
+                      borderBottomRightRadius: "220px",
+                    }}
+                  >
+                    <img
+                      src={slide.image}
+                      alt={slide.location}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+                {/* Content */}
+                <div className="px-6 py-10">
+                  <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+                    {slide.title}
+                    <br />
+                    <span className="text-pink-500">{slide.location}</span>
+                  </h1>
+
+                  <p className="mt-6 text-gray-600 text-base sm:text-lg leading-8">
+                    {slide.description}
+                  </p>
+                </div>
               </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='relative w-full aspect-[4/5] sm:aspect-[16/9] overflow-hidden'>
-            <div className='relative h-full w-full'>
-              <img src={secondImage} alt="Telangana" className='h-full w-full object-cover'/>
-              <div className='absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10'></div>
-            </div>
-            <div className='absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0'>
-              <div className='max-w-lg px-6 sm:px-12 lg:px-0'>
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight'>
-                  Integrated Facility Solutions Across <span className='text-pink-500'>Telangana</span>
-                </h1>
-                <p className='text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed'>
-                  Delivering cutting-edge facility management services across Telangana, encompassing security, staffing, and technical maintenance for seamless operational continuity.
-                </p>
+
+              {/* ================= DESKTOP (1280px - 1360px Safe) ================= */}
+              <div className="hidden xl:block relative h-[780px] bg-white overflow-hidden">
+                
+                {/* 1. BACKGROUND VISUAL LAYER */}
+                {/* Left Pink Circle Segment */}
+                <div className="absolute left-0 top-1/2 -translate-y-1/2 z-10 overflow-hidden pointer-events-none">
+                  <div
+                    className="bg-pink-500 rounded-full"
+                    style={{
+                      width: "850px",
+                      height: "850px",
+                      marginLeft: "-810px",
+                    }}
+                  />
+                </div>
+
+                {/* Right Edge-to-Edge Image */}
+                <div className="absolute right-0 top-0 h-full w-[32%] z-10">
+                  <div
+                    className="h-full w-full overflow-hidden"
+                    style={{
+                      borderTopLeftRadius: "450px",
+                      borderBottomLeftRadius: "450px",
+                    }}
+                  >
+                    <img
+                      src={slide.image}
+                      alt={slide.location}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
+
+
+                {/* 2. FOREGROUND CONTENT LAYER */}
+                {/* Max-W container controls horizontal spacing perfectly */}
+                <div className="max-w-7xl mx-auto h-full px-12 relative z-20 flex flex-col justify-between py-20">
+                  
+                  {/* Top: Brand Heading aligned with max-w grid, safe from left pink circle */}
+                  <div className="w-[65%] pl-4">
+                    <VibgyorHeading />
+                  </div>
+
+                  {/* Middle/Bottom: Headings and description */}
+                  <div className="w-[62%] mb-auto pt-24 pl-4">
+                    <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 leading-tight">
+                      {slide.title}
+                      <br />
+                      <span className="text-pink-500">
+                        {slide.location}
+                      </span>
+                    </h1>
+
+                    <p className="mt-8 text-lg xl:text-xl text-gray-600 leading-8 max-w-xl">
+                      {slide.description}
+                    </p>
+                  </div>
+
+                </div>
+
               </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='relative w-full aspect-[4/5] sm:aspect-[16/9] overflow-hidden'>
-            <div className='relative h-full w-full'>
-              <img src={thirdImage} alt="Andhra Pradesh" className='h-full w-full object-cover'/>
-              <div className='absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10'></div>
-            </div>
-            <div className='absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0'>
-              <div className='max-w-lg px-6 sm:px-12 lg:px-0'>
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight'>
-                  Strategic Facility Management for <span className='text-pink-500'>Andhra Pradesh</span>
-                </h1>
-                <p className='text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed'>
-                  Offering comprehensive facility solutions including technical support, housekeeping, and manpower services, driving organizational efficiency and growth.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='relative w-full aspect-[4/5] sm:aspect-[16/9] overflow-hidden'>
-            <div className='relative h-full w-full'>
-              <img src={fourthImage} alt="Shamshabad" className='h-full w-full object-cover'/>
-              <div className='absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10'></div>
-            </div>
-            <div className='absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0'>
-              <div className='max-w-lg px-6 sm:px-12 lg:px-0'>
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight'>
-                  Premium Facility Services in <span className='text-pink-500'>Shamshabad</span>
-                </h1>
-                <p className='text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed'>
-                  Providing world-class facility management solutions with precision, innovation, and unwavering commitment to excellence across all operations.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='relative w-full aspect-[4/5] sm:aspect-[16/9] overflow-hidden'>
-            <div className='relative h-full w-full'>
-              <img src={fifthImage} alt="Turkapally" className='h-full w-full object-cover'/>
-              <div className='absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10'></div>
-            </div>
-            <div className='absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0'>
-              <div className='max-w-lg px-6 sm:px-12 lg:px-0'>
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight'>
-                  Superior Facility Solutions for <span className='text-pink-500'>Turkapally</span>
-                </h1>
-                <p className='text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed'>
-                  Delivering bespoke facility management services encompassing staffing, maintenance, and support solutions tailored to client requirements.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='relative w-full aspect-[4/5] sm:aspect-[16/9] overflow-hidden'>
-            <div className='relative h-full w-full'>
-              <img src={sixthImage} alt="PAN India" className='h-full w-full object-cover'/>
-              <div className='absolute inset-0 bg-gradient-to-r from-black via-sky-900/50 to-sky-900/10'></div>
-            </div>
-            <div className='absolute inset-0 flex items-center text-white justify-start max-w-7xl mx-auto px-4 lg:px-0'>
-              <div className='max-w-lg px-6 sm:px-12 lg:px-0'>
-                <h1 className='text-xl sm:text-2xl md:text-3xl lg:text-5xl font-bold mb-2 sm:mb-3 md:mb-4 leading-tight'>
-                  Nationwide Facility Management <span className='text-pink-500'>PAN India</span>
-                </h1>
-                <p className='text-xs sm:text-sm md:text-base lg:text-lg leading-relaxed'>
-                  India's premier facility management partner, delivering consistent excellence in housekeeping, security, technical services, and manpower solutions nationwide.
-                </p>
-              </div>
-            </div>
-          </div>
-        </SwiperSlide>
+            </>
+          </SwiperSlide>
+        ))}
       </Swiper>
-    </div>
+    </section>
   );
 };
 
