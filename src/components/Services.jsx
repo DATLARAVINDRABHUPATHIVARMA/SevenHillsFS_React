@@ -66,7 +66,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl font-bold mb-4 text-center text-white">Our Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 px-8 lg:px-0">
-          {services.map((service) => (
+          { services.map((service) => (
             <div key={service.id} className="bg-white rounded-lg shadow-md pb-4 hover:scale-110 transition-transform duration-600">
               <img src={service.image} alt={service.title} className="w-full h-72 object-cover rounded-md mb-4"/>
               <div className="flex flex-col justify-center items-center px-8">
