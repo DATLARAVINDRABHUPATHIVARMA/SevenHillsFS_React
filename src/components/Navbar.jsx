@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaAlignJustify, FaChevronDown, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
-import Logo from "../assets/Seven_Hills_Logo.png";
+import Logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -13,30 +13,29 @@ const Navbar = () => {
   const handlePhoneClick = () => { window.location.href = "tel:+914035511829"; };
 
   return (
-    <div className="bg-white shadow-md border-b border-gray-200 sticky top-0 z-50">
+    <div className="bg-white shadow-md sticky top-0 z-50">
       <div className="w-full mx-auto px-4 xl:px-6 2xl:px-8">
-        <div className="flex items-center justify-between h-[114px] xl:h-[144px] gap-2 2xl:gap-4">
-          <div className="flex-shrink-0 flex items-center">
-            <Link to="/" className="logo-link flex items-center">
-              <img src={Logo} alt="logo" className="w-[145px] sm:w-[170px] xl:w-[200px] 2xl:w-[220px] object-contain logo-image"/>
+        <div className="flex items-center justify-between h-[108px] sm:h-[132px] xl:h-[151px] 2xl:h-[163px] gap-2 2xl:gap-4 relative">
+          
+          {/* Logo container area matched to scaled widths */}
+          <div className="h-full flex items-center flex-shrink-0 relative w-[120px] sm:w-[144px] xl:w-[168px] 2xl:w-[192px] logo-interactive-zone">
+            <Link to="/" className="logo-link">
+              <img src={Logo} alt="logo" className="h-full w-full object-contain logo-image"/>
             </Link>
           </div>
-          <div className="hidden xl:flex flex-grow flex-col justify-center ml-4 2xl:ml-6 overflow-visible">
-            <div className="flex justify-end items-center text-[18px] pb-2 gap-4 2xl:gap-6 text-nowrap">
-              <div className="flex items-center gap-2 cursor-pointer transition-colors duration-300 group-meta" onClick={handleEmailClick}>
-                <FaEnvelope className="text-pink-500 text-lg group-meta-hover:text-pink-500" />
-                <span className="text-gray-800 tracking-wide font-semibold group-meta-hover:text-pink-500">hr@sevenhillsfs.com</span>
+
+          {/* Desktop Navigation Engine */}
+          <div className="hidden xl:flex flex-grow flex-col justify-center ml-6 2xl:ml-8 overflow-visible h-full py-2">
+            <div className="flex justify-end items-center text-[18px] pb-1.5 gap-4 2xl:gap-6 text-nowrap">
+              <div className="flex items-center gap-2 cursor-pointer transition-colors duration-300 group-meta" onClick={handleEmailClick}><FaEnvelope className="text-pink-500 text-lg group-meta-hover:text-pink-500" /><span className="text-gray-800 tracking-wide font-semibold group-meta-hover:text-pink-500">hr@sevenhillsfs.com</span>
               </div>
-              <div className="flex items-center gap-2 cursor-pointer transition-colors duration-300 group-meta" onClick={handlePhoneClick}>
-                <FaPhoneAlt className="text-pink-500 text-base group-meta-hover:text-pink-500" />
-                <span className="text-gray-800 tracking-wide font-semibold group-meta-hover:text-pink-500">+9140 35511829</span>
+              <div className="flex items-center gap-2 cursor-pointer transition-colors duration-300 group-meta" onClick={handlePhoneClick}><FaPhoneAlt className="text-pink-500 text-base group-meta-hover:text-pink-500" /><span className="text-gray-800 tracking-wide font-semibold group-meta-hover:text-pink-500">+9140 35511829</span>
               </div>
             </div>
-            <div className="flex items-center justify-between border-t border-gray-300 pt-2.5 w-full text-nowrap">
+            <div className="flex items-center justify-between border-t border-gray-300 pt-1.5 w-full text-nowrap">
               <Link to="/" className="nav-link">Home</Link>
-              <div className="relative group py-2">
-                <button className="menu-btn"><span>About Us</span><FaChevronDown className="ml-1 2xl:ml-1.5 text-[12px] transition duration-300 flex-shrink-0 group-hover:rotate-180"/>
-                </button>
+              <div className="relative group py-1">
+                <button className="menu-btn"><span>About Us</span><FaChevronDown className="ml-1 2xl:ml-1.5 text-[12px] transition duration-300 flex-shrink-0 group-hover:rotate-180"/></button>
                 <div className="dropdown-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200">
                   <Link to="/company-profile" className="dropdown-item">Company Profile</Link>
                   <Link to="/history" className="dropdown-item">History</Link>
@@ -44,7 +43,7 @@ const Navbar = () => {
                   <Link to="/accolades" className="dropdown-item">Accolades</Link>
                 </div>
               </div>
-              <div className="relative group py-2">
+              <div className="relative group py-1">
                 <button className="menu-btn"><span>Industries</span><FaChevronDown className="ml-1 2xl:ml-1.5 text-[12px] transition duration-300 flex-shrink-0 group-hover:rotate-180"/></button>
                 <div className="dropdown-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200">
                   <Link to="/industries/aviation" className="dropdown-item">Aviation</Link>
@@ -55,7 +54,7 @@ const Navbar = () => {
                   <Link to="/industries/hospitality" className="dropdown-item">Hospitality</Link>
                 </div>
               </div>
-              <div className="relative group py-2">
+              <div className="relative group py-1">
                 <button className="menu-btn"><span>Services</span><FaChevronDown className="ml-1 2xl:ml-1.5 text-[12px] transition duration-300 flex-shrink-0 group-hover:rotate-180"/></button>
                 <div className="dropdown-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200">
                   <Link to="/services/house-keeping" className="dropdown-item">House Keeping</Link>
@@ -67,7 +66,7 @@ const Navbar = () => {
                   <Link to="/services/office-support" className="dropdown-item">Office Support</Link>
                 </div>
               </div>
-              <div className="relative group py-2">
+              <div className="relative group py-1">
                 <button className="menu-btn"><span>Locations</span><FaChevronDown className="ml-1 2xl:ml-1.5 text-[12px] transition duration-300 flex-shrink-0 group-hover:rotate-180"/></button>
                 <div className="dropdown-menu invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-all duration-200">
                   <Link to="/locations/shamshabad" className="dropdown-item">Shamshabad</Link>
@@ -94,19 +93,17 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
       {mobileMenu && (
-        <div className="xl:hidden bg-white border-t border-gray-200 shadow-md">
+        <div className="xl:hidden bg-white shadow-md">
           <div className="px-6 py-6 flex flex-col space-y-5 max-h-[80vh] overflow-y-auto">
-            <div className="border-b border-gray-200 pb-4 space-y-3.5">
-              <div className="flex items-center gap-3 cursor-pointer" onClick={handleEmailClick}><FaEnvelope className="text-pink-500 text-base" /><span className="text-gray-800 text-[15px] font-semibold">hr@sevenhillsfs.com</span>
-              </div>
-              <div className="flex items-center gap-3 cursor-pointer" onClick={handlePhoneClick}><FaPhoneAlt className="text-pink-500 text-base" /><span className="text-gray-800 text-[15px] font-semibold">+9140 35511829</span>
-              </div>
+            <div className="border-b border-gray-300 pb-4 space-y-3.5">
+              <div className="flex items-center gap-3 cursor-pointer" onClick={handleEmailClick}><FaEnvelope className="text-pink-500 text-base" /><span className="text-gray-800 text-[15px] font-semibold">hr@sevenhillsfs.com</span></div>
+              <div className="flex items-center gap-3 cursor-pointer" onClick={handlePhoneClick}><FaPhoneAlt className="text-pink-500 text-base" /><span className="text-gray-800 text-[15px] font-semibold">+9140 35511829</span></div>
             </div>
             <Link to="/" className="mobile-link">Home</Link>
             <div>
-              <button onClick={() => setAboutDropdown(!aboutDropdown)} className="mobile-dropdown-btn"><span>About Us</span><FaChevronDown className={`transition duration-300 ${ aboutDropdown ? "rotate-180" : "" }`}/>
-              </button>
+              <button onClick={() => setAboutDropdown(!aboutDropdown)} className="mobile-dropdown-btn"><span>About Us</span><FaChevronDown className={`transition duration-300 ${ aboutDropdown ? "rotate-180" : "" }`}/></button>
               {aboutDropdown && (
                 <div className="mobile-dropdown">
                   <Link to="/company-profile">Company Profile</Link>
@@ -117,8 +114,7 @@ const Navbar = () => {
               )}
             </div>
             <div>
-              <button onClick={() => setIndustriesDropdown(!industriesDropdown)} className="mobile-dropdown-btn"><span>Industries</span><FaChevronDown className={`transition duration-300 ${ industriesDropdown ? "rotate-180" : "" }`}/>
-              </button>
+              <button onClick={() => setIndustriesDropdown(!industriesDropdown)} className="mobile-dropdown-btn"><span>Industries</span><FaChevronDown className={`transition duration-300 ${ industriesDropdown ? "rotate-180" : "" }`}/></button>
               {industriesDropdown && (
                 <div className="mobile-dropdown">
                   <Link to="/industries/aviation">Aviation</Link>
@@ -131,8 +127,7 @@ const Navbar = () => {
               )}
             </div>
             <div>
-              <button onClick={() => setServicesDropdown(!servicesDropdown)} className="mobile-dropdown-btn"><span>Services</span><FaChevronDown className={`transition duration-300 ${ servicesDropdown ? "rotate-180" : "" }`}/>
-              </button>
+              <button onClick={() => setServicesDropdown(!servicesDropdown)} className="mobile-dropdown-btn"><span>Services</span><FaChevronDown className={`transition duration-300 ${ servicesDropdown ? "rotate-180" : "" }`}/></button>
               {servicesDropdown && (
                 <div className="mobile-dropdown">
                   <Link to="/services/house-keeping">House Keeping</Link>
@@ -170,7 +165,6 @@ const Navbar = () => {
           </div>
         </div>
       )}
-
       <style jsx>{`
         .menu-btn { display: flex; align-items: center; justify-content: center; padding: 4px 1.5px; font-size: 18px; font-weight: 600; color: #111111; letter-spacing: 0.2px; transition: all 0.3s ease; cursor: pointer; background: none; border: none; white-space: nowrap; } 
         .nav-link { display: inline-flex; align-items: center; justify-content: center; padding: 4px 1.5px; font-size: 18px; font-weight: 600; color: #111111; letter-spacing: 0.2px; transition: all 0.3s ease; text-decoration: none; white-space: nowrap; }
@@ -191,8 +185,26 @@ const Navbar = () => {
         .mobile-dropdown { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; margin-left: 18px; }
         .mobile-dropdown a { color: #4b5563; font-size: 16px; font-weight: 500; text-decoration: none; display: block; }
         .mobile-dropdown a:hover { color: #ec4899; }
-        .logo-link { display: inline-block; transition: transform 0.3s ease; flex-shrink: 0; }
-        .logo-link:hover { transform: scale(1.02); } 
+        
+        /* --- SYNCED INTERACTIVE TRANSITION LOGIC --- */
+        .logo-link { 
+          position: absolute; 
+          left: 0; 
+          top: 50%; 
+          transform: translateY(-50%); 
+          z-index: 10; 
+          transform-origin: left center;
+          /* Default state: Exactly 150% height of the brand new larger Navbar */
+          height: 150%; 
+          filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
+          transition: height 0.3s cubic-bezier(0.25, 1, 0.5, 1); 
+        }
+        
+        /* Hover Action state: Shrinks perfectly down to matching 100% Navbar height limits */
+        .logo-interactive-zone:hover .logo-link { 
+          height: 100%; 
+        }
+
         .logo-image { display: block; }
         .group-meta:hover .group-meta-hover\\:text-pink-500 { color: #ec4899; }
       `}</style>
