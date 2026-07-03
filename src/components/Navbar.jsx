@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { FaAlignJustify, FaChevronDown, FaEnvelope, FaPhoneAlt } from "react-icons/fa";
 import Logo from "../assets/Seven_Hills_Logo.png";
 
+
 const Navbar = () => {
   const [mobileMenu, setMobileMenu] = useState(false);
   const [aboutDropdown, setAboutDropdown] = useState(false);
   const [industriesDropdown, setIndustriesDropdown] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
   const [locationsDropdown, setLocationsDropdown] = useState(false);
+  co
 
   return (
     <div className="bg-white border-b border-b-gray-200">
