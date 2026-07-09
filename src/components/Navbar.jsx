@@ -16,15 +16,9 @@ const Navbar = () => {
     <div className="bg-white shadow-md sticky top-0 z-50">
       <div className="w-full mx-auto px-4 xl:px-6 2xl:px-8">
         <div className="flex items-center justify-between h-[108px] sm:h-[132px] xl:h-[151px] 2xl:h-[163px] gap-2 2xl:gap-4 relative">
-          
-          {/* Logo container area matched to scaled widths */}
           <div className="h-full flex items-center flex-shrink-0 relative w-[120px] sm:w-[144px] xl:w-[168px] 2xl:w-[192px] logo-interactive-zone">
-            <Link to="/" className="logo-link">
-              <img src={Logo} alt="logo" className="h-full w-full object-contain logo-image"/>
-            </Link>
+            <Link to="/" className="logo-link"><img src={Logo} alt="logo" className="h-full w-full object-contain logo-image"/></Link>
           </div>
-
-          {/* Desktop Navigation Engine */}
           <div className="hidden xl:flex flex-grow flex-col justify-center ml-6 2xl:ml-8 overflow-visible h-full py-2">
             <div className="flex justify-end items-center text-[18px] pb-1.5 gap-4 2xl:gap-6 text-nowrap">
               <div className="flex items-center gap-2 cursor-pointer transition-colors duration-300 group-meta" onClick={handleEmailClick}><FaEnvelope className="text-pink-500 text-lg group-meta-hover:text-pink-500" /><span className="text-gray-800 tracking-wide font-semibold group-meta-hover:text-pink-500">hr@sevenhillsfs.com</span>
@@ -185,26 +179,8 @@ const Navbar = () => {
         .mobile-dropdown { display: flex; flex-direction: column; gap: 14px; margin-top: 14px; margin-left: 18px; }
         .mobile-dropdown a { color: #4b5563; font-size: 16px; font-weight: 500; text-decoration: none; display: block; }
         .mobile-dropdown a:hover { color: #ec4899; }
-        
-        /* --- SYNCED INTERACTIVE TRANSITION LOGIC --- */
-        .logo-link { 
-          position: absolute; 
-          left: 0; 
-          top: 50%; 
-          transform: translateY(-50%); 
-          z-index: 10; 
-          transform-origin: left center;
-          /* Default state: Exactly 150% height of the brand new larger Navbar */
-          height: 150%; 
-          filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08));
-          transition: height 0.3s cubic-bezier(0.25, 1, 0.5, 1); 
-        }
-        
-        /* Hover Action state: Shrinks perfectly down to matching 100% Navbar height limits */
-        .logo-interactive-zone:hover .logo-link { 
-          height: 100%; 
-        }
-
+        .logo-link { position: absolute; left: 0; top: 50%; transform: translateY(-50%); z-index: 10; transform-origin: left center; height: 150%; filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.08)); transition: height 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
+        .logo-interactive-zone:hover .logo-link { height: 100%; }
         .logo-image { display: block; }
         .group-meta:hover .group-meta-hover\\:text-pink-500 { color: #ec4899; }
       `}</style>
