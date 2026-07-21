@@ -9,7 +9,6 @@ const Navbar = () => {
   const [industriesDropdown, setIndustriesDropdown] = useState(false);
   const [servicesDropdown, setServicesDropdown] = useState(false);
   const [locationsDropdown, setLocationsDropdown] = useState(false);
-  co
 
   return (
     <div className="bg-white border-b border-b-gray-200">
