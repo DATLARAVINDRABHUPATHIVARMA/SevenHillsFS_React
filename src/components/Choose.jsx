@@ -1,5 +1,5 @@
 import React from "react";
-import choose from "../assets/SliderImages/1.jpg";
+import choose from "../assets/SliderImages/1.jpg"; 
 
 const Choose = () => {
   return (
